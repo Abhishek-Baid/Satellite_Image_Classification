@@ -15,10 +15,28 @@ The project aims to compare different ML/DL models and techniques applied on Eur
 
 ### A. Data Processing and Data Augmentation
 For the machine learning algorithms , the EuroSAT RGB dataset is loaded using CV2 library and converted to numpy arrays. Further to improve performance, data augmentation was done on images with 1:1 ratio , doubling the dataset. Due to memory contraints, further augmentation was not possible and these datasets were used with different classification algorithms with different properties.
-For the deep learning solution, tensorflow's ImageDataGenerator , flow from directory and flow from dataframe methods were used for better results using image augmentation.
+For the deep learning solution, tensorflow's ImageDataGenerator , flow from directory and flow from dataframe methods were used for better results using image augmentation. 
 
 ### B. Model Summary 
-### Machine Learning Algorithms
-#### 1) 
+### Machine Learning Algorithms : Models Applied and Results
+
+|S.No.|Model|Parametes|Accuracy|Precision|Recall|F1-Score|
+|---|---|---|---|---|---|---|
+|1 |	SGD |	Default |	0.237|	0.282|	0.26|	0.208|
+|2 |	SGD |	max_iter=1500, tol=0.0001, early_stopping|	0.415|	0.403|	0.409|	0.401|
+|3 |	SGD |	max_iter=1500, tol=0.0001|	0.395|	0.465|	0.384|	0.392|
+|4 |	KNN |	n_neighbours=10| 0.34|	0.29|	0.34|	0.24|
+|5 |	KNN |	n_neighbours=7|	0.338|	0.49|	0.34|	0.27|
+|6 |	KNN |	n_neighbours=15, algo='kd_tree'|	0.337|	0.49|	0.3|	0.24|
+|7 |	LogisticRegressionCV |	multi_class='multinomial', penalty='l2', solver='lbfgs', Cs=[0.01, 0.1, 1, 10], random_state=83|	0.41||||			
+|8 |	Linear SVM Classifier |	max_iter=100 |	0.245|	0.296|	0.246|	0.248|
+|9 |	SVM poly kernel |	SVC(kernel="poly", degree=3, coef0=1, verbose=True, C=5  )|	0.63|	0.636|	0.625|	0.624|
+|10 |	SVM poly kernel |	SVC(kernel="poly", degree=5, coef0=1, verbose=True, C=1  )|	0.64|	0.644|	0.634|	0.635|
+|11 |	Bagging Classifer |	500 decision trees|	0.6|	0.619|	0.626|	0.614|
+|12 |	RandomForestClassifier |	number of trees =500,  max_leaf_nodes allowed =15 with criterion as 'entropy'|	0.49|	0.498|	0.426|	0.402|
+|13 |	RandomForestClassifier |	Number of trees = 1000, criterion='gini' with no threshold on leaf nodes| 	0.698|	0.686|	0.691|	0.682|
+|14 |	RandomForestClassifier |	Number of trees = 1300, criterion='gini' with no threshold on leaf nodes|	0.699|	0.688|	0.692|	0.683|
+
+
 
 ### Data Augmentation
