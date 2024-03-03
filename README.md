@@ -37,6 +37,19 @@ For the deep learning solution, tensorflow's ImageDataGenerator , flow from dire
 |13 |	RandomForestClassifier |	Number of trees = 1000, criterion='gini' with no threshold on leaf nodes| 	0.698|	0.686|	0.691|	0.682|
 |14 |	RandomForestClassifier |	Number of trees = 1300, criterion='gini' with no threshold on leaf nodes|	0.699|	0.688|	0.692|	0.683|
 
+### Neural Net Based Models
+
+|S.No.|	Model|	Approach|	Validation Loss|	Test Accuracy|	Precision|	Recall|	F1-Score|
+|---|---|---|---|---|---|---|---|
+|1 | Simple Convolution|	3 convolution layers with dropout and 3 dense layers.  Optimizer=Nadam(learning_rate=0.000005), loss='sparse_categorical_crossentropy' , metrics=['accuracy'] | ||||| 					
+|2 |	Resnet34 (Self Implementation)|	optimizer=Nadam(learning_rate=0.000005,clipnorm=1.0), loss='sparse_categorical_crossentropy' , metrics=['accuracy']|	0.356|	0.881|	0.875|	0.874|	0.874|
+|3	| Resnet50(Transfer Learning) |	optimizer=Nadam(learning_rate=0.000001,clipnorm=1.0), loss='sparse_categorical_crossentropy' , metrics=['accuracy'] | 	0.234|	0.928|	0.927|	0.925|	0.926|
+|4 |	Inceptionv3(Transfer Learning)| optimizer=Nadam(learning_rate=0.000001,clipnorm=1.0), loss='sparse_categorical_crossentropy' , metrics=['accuracy'] | 	0.231|	0.937|	0.936|	0.935|	0.935|
+|5 |	InceptionResnetv2(Transfer Learning)|	optimizer=Nadam(learning_rate=0.000001,clipnorm=1.0), loss='sparse_categorical_crossentropy' , metrics=['accuracy']| 	0.173|	0.938|	0.938|	0.936|	0.937|
+|6 |	VGG19|	optimizer=Nadam(learning_rate=0.000001,clipnorm=1.0), loss='sparse_categorical_crossentropy' , metrics=['accuracy'] |	0.15|	0.838	|0.85|	0.83|	0.84|
+
+
+
 
 
 ### Data Augmentation
