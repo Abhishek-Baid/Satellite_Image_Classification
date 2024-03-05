@@ -48,8 +48,3 @@ For the deep learning solution, tensorflow's ImageDataGenerator , flow from dire
 |5 |	InceptionResnetv2(Transfer Learning)|	optimizer=Nadam(learning_rate=0.000001,clipnorm=1.0), loss='sparse_categorical_crossentropy' , metrics=['accuracy']| 	0.173|	0.938|	0.938|	0.936|	0.937|
 |6 |	VGG19|	optimizer=Nadam(learning_rate=0.000001,clipnorm=1.0), loss='sparse_categorical_crossentropy' , metrics=['accuracy'] |	0.15|	0.838	|0.85|	0.83|	0.84|
 
-
-
-
-
-### Data Augmentation
